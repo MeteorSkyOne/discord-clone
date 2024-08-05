@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { ServerSection } from "./server-section";
 import { channel } from "diagnostics_channel";
 import { ServerChannel } from "./server-channel";
-import { ServerMember } from "./server-membet";
+import { ServerMember } from "./server-member";
 
 interface ServerSidebarProps {
     serverId: string;
