@@ -79,7 +79,6 @@ export const ServerSearch = ({
                         return (
                             <CommandGroup key={label} heading={label}>
                                 {data?.map(({ id, icon, name }) => {
-                                    console.log(id)
                                     return (
                                         <CommandItem key={id} onSelect={() => onClick({ id, type })}>
                                             {icon}

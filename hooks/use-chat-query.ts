@@ -22,7 +22,7 @@ export const useChatQuery = ({
         const url = qs.stringifyUrl({
             url: apiUrl,
             query: {
-                cursor: pageParam,
+                cursor: null,
                 [paramKey]: paramValue
             }
         }, { skipNull: true })
@@ -40,9 +40,9 @@ export const useChatQuery = ({
     } = useInfiniteQuery({
         queryKey: [queryKey],
         queryFn: fetchMessages,
-        getNextPageParam: (lastPage) => lastPage?.nextCursor,
+        getNextPageParam: (lastPage, allPages) => lastPage?.nextCursor,
         refetchInterval: isConnected ? false : 1000,
-        initialPageParam: null
+        initialPageParam: null,
     })
 
     return {

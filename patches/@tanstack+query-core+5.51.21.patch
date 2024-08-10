@@ -1,0 +1,13 @@
+diff --git a/node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.cjs b/node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.cjs
+index 5af024f..5d470c0 100644
+--- a/node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.cjs
++++ b/node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.cjs
+@@ -125,7 +125,7 @@ function getNextPageParam(options, { pages, pageParams }) {
+   return pages.length > 0 ? options.getNextPageParam(
+     pages[lastIndex],
+     pages,
+-    pageParams[lastIndex],
++    pageParams?.lastIndex,
+     pageParams
+   ) : void 0;
+ }
